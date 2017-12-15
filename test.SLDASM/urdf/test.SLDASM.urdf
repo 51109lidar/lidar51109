@@ -1,0 +1,96 @@
+<robot
+  name="test.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.02541 0.007421 0.16"
+        rpy="0 0 0" />
+      <mass
+        value="0.085133" />
+      <inertia
+        ixx="0.00015553"
+        ixy="-5.0265E-21"
+        ixz="-1.7229E-22"
+        iyy="2.4993E-05"
+        iyz="-3.6499E-22"
+        izz="0.00017911" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l1">
+    <inertial>
+      <origin
+        xyz="2.35922392732846E-16 -0.0518451142346924 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.0851327412287184" />
+      <inertia
+        ixx="0.000155534648022978"
+        ixy="5.13301966036106E-19"
+        ixz="3.65552941169301E-22"
+        iyy="2.49926248174189E-05"
+        iyz="-8.73241326349883E-22"
+        izz="0.000179108393819918" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test.SLDASM/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://test.SLDASM/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="continuous">
+    <origin
+      xyz="-0.02541 -0.165 0.059266"
+      rpy="-1.5708 1.1128 -3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="l1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
